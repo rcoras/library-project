@@ -1,4 +1,4 @@
-import ENV from 'ga-wdi-boston.ember-auth/config/environment';
+import ENV from 'library-project/config/environment';
 import ActiveModelAdapter from 'active-model-adapter';
 import { inject as service } from '@ember/service';
 import { computed } from '@ember/object';
