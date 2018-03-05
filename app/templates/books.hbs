@@ -1,0 +1,10 @@
+<div>
+  <h2>Your Reads</h2>
+  {{#each model as |book|}}
+    <h3>
+      {{!-- {{#link-to 'book' list}} --}}
+      {{book.title}}
+      {{!-- {{/link-to}} --}}
+    </h3>
+  {{/each}}
+</div>
