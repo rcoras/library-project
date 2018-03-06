@@ -14,6 +14,7 @@ Router.map(function () {
   this.route('books', function() {
     this.route('new');
   });
+  this.route('book', { path: '/books/:place_id'});
 });
 
 export default Router;
