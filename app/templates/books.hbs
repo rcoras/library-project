@@ -4,6 +4,7 @@
     <h3>
       {{!-- {{#link-to 'book' list}} --}}
       {{book.title}}
+      <button {{action 'deleteBook' book}}>Delete Book</button>
       {{!-- {{/link-to}} --}}
     </h3>
   {{/each}}
