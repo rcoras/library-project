@@ -10,10 +10,10 @@ export default Route.extend({
     deleteBook (book) {
       return book.destroyRecord()
       .then(() => this.transitionTo('books'))
-    },
-    editBook (book) {
-      return book.save()
-        .then(() => this.transitionTo('books'))
     }
+    // editBook (book) {
+    //   return book.save()
+    //     .then(() => this.transitionTo('books'))
+    // }
   }
 });
