@@ -5,7 +5,7 @@
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
-        <li>{{#link-to "users"}}Users{{/link-to}}</li>
+        {{!-- <li>{{#link-to "users"}}Users{{/link-to}}</li> --}}
         <li>{{#link-to "books"}}Books{{/link-to}}</li>
         {{/if}}
       </ul>
@@ -21,9 +21,13 @@
     </div>
   </div>
 </nav>
-
-<h1>Welcome to Bec's Bibliotec</h1>
-
+{{#if user}}
+<div class="spacer"></div>
+<h1>{{user}}'s Bibliotecca</h1>
+{{else}}
+<h1>Welcome to Becca's Bibliotecca</h1>
+<h4>Log in or sign up to get started</h4>
+{{/if}}
 {{#each flashMessages.queue as |flash|}}
   {{flash-message flash=flash}}
 {{/each}}

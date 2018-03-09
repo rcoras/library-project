@@ -1,6 +1,7 @@
 <div>
   <h2>Your Reads</h2>
   {{#each model as |book|}}
+  {{!-- {{#if model.books}} --}}
     <h3>
       {{#link-to 'book' book}}
       {{book.title}}
@@ -11,6 +12,11 @@
     </h3>
   {{/each}}
 </div>
-{{#link-to 'books.new'}}<button>Add Book</button>{{/link-to}}
 
+{{#link-to 'books.new'}}<button>Add Book</button>{{/link-to}}
+{{!-- <h5>You don't have any books on your list yet</h5>
+{{#link-to 'books.new'}}<button>Add Book</button>{{/link-to}} --}}
 {{outlet}}
+<div class="spacer"></div>
+<div class="spacer"></div>
+<div class="spacer"></div>
