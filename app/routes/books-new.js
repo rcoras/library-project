@@ -2,13 +2,13 @@ import Route from '@ember/routing/route';
 
 export default Route.extend({
   model () {
-    return this.get('store').createRecord('book', {}).rollbackAttributes()
+    return this.get('store').createRecord('book', {}).rollbackAttributes();
   },
   actions: {
   save (newBook) {
     // console.log('save run')
     return newBook.save()
-      .then(() => this.transitionTo('books'))
+      .then(() => this.transitionTo('books'));
     }
   }
 });
