@@ -2,5 +2,5 @@
   {{model.title}}, {{model.author}}
   </h3>
   <button {{action 'deleteBook' model}}>Delete Book</button>
-  {{#link-to 'book.edit'}}<button>Edit Book</button>{{/link-to}}
+  {{#link-to 'book.edit' data-toggle="collapse"}}<button>Edit Book</button>{{/link-to}}
   {{outlet}}

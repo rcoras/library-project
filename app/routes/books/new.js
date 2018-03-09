@@ -6,7 +6,7 @@ export default Route.extend({
   },
   actions: {
   save (newBook) {
-    console.log('save run')
+    // console.log('save run')
     return newBook.save()
       .then(() => this.transitionTo('books'))
     }
