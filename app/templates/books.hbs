@@ -1,21 +1,17 @@
 <div>
   <h2>Your Reads</h2>
+  {{!--Grab books from model and each through to show book title  --}}
   {{#each model as |book|}}
-  {{!-- {{#if model.books}} --}}
     <h3>
+      {{!--use link-to to link to each individual book by clicking on title  --}}
       {{#link-to 'book' book}}
       {{book.title}}
-      {{!-- <button {{action 'deleteBook' book}}>Delete Book</button>
-      {{input value=book.title}}
-      <button {{action 'editBook' book}}>Edit Book</button>--}}
       {{/link-to}}
     </h3>
   {{/each}}
 </div>
 
 {{#link-to 'books.new'}}<button>Add Book</button>{{/link-to}}
-{{!-- <h5>You don't have any books on your list yet</h5>
-{{#link-to 'books.new'}}<button>Add Book</button>{{/link-to}} --}}
 {{outlet}}
 <div class="spacer"></div>
 <div class="spacer"></div>
